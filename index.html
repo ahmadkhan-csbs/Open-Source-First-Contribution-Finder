@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Find approachable open-source issues and get a clear first-contribution plan with OpenStart."
+    />
+    <meta name="theme-color" content="#f6f6f1" />
+    <title>OpenStart — Find your first open-source issue</title>
+    <link rel="preconnect" href="https://api.github.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="OpenStart home">
+        <span class="brand-mark" aria-hidden="true">fp</span>
+        <span>openstart<span class="brand-period">.</span></span>
+      </a>
+      <a class="top-link" href="https://github.com" target="_blank" rel="noreferrer">
+        Powered by GitHub <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Your first contribution<br />is <span>closer than you think.</span></h1>
+          <p class="hero-description">
+            Find issues that fit your skills, understand why they’re approachable, and get a clear path to your first pull request.
+          </p>
+        </div>
+        <div class="hero-stamp" aria-hidden="true">
+          <span class="stamp-spark">✳</span>
+          <span>small steps.<br />real impact.</span>
+        </div>
+      </section>
+
+      <section class="search-panel" aria-label="Search open-source issues">
+        <form id="search-form">
+          <label class="search-label" for="search-input">What are you interested in?</label>
+          <div class="search-row">
+            <div class="search-input-wrap">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input
+                id="search-input"
+                name="query"
+                type="search"
+                placeholder="Try “react”, “python”, or owner/repo"
+                autocomplete="off"
+                required
+                maxlength="100"
+                aria-describedby="search-hint"
+              />
+              <button class="clear-search" id="clear-search" type="button" aria-label="Clear search" hidden>×</button>
+            </div>
+            <button class="search-button" id="search-button" type="submit">
+              Find my first issue <span aria-hidden="true">→</span>
+            </button>
+          </div>
+          <div class="search-footer">
+            <p class="search-hint" id="search-hint"><span aria-hidden="true">↳</span> Search a topic, language, or a specific repository</p>
+            <div class="quick-searches" aria-label="Popular searches">
+              <span>Popular:</span>
+              <button type="button" class="search-chip" data-query="react">React</button>
+              <button type="button" class="search-chip" data-query="python">Python</button>
+              <button type="button" class="search-chip" data-query="documentation">Docs</button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section class="results-section" aria-labelledby="results-heading">
+        <div class="results-heading-row">
+          <div>
+            <h2 id="results-heading">Find your first issue</h2>
+          </div>
+          <div class="sort-wrap">
+            <label for="sort-select">Sort by</label>
+            <select id="sort-select">
+              <option value="score">Best match</option>
+              <option value="updated">Recently updated</option>
+              <option value="comments">Fewest comments</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="results-meta" id="results-meta" aria-live="polite">
+          <span class="results-dot" aria-hidden="true"></span>
+          <span id="results-count">Search a topic or repository to explore open issues</span>
+        </div>
+        <div class="status-message" id="status-message" role="status" hidden></div>
+        <div class="issue-list" id="issue-list" aria-live="polite"></div>
+
+        <div class="welcome-notes" id="welcome-grid">
+          <article class="welcome-note">
+            <h3>Look beyond labels</h3>
+            <p>Issue descriptions and repo activity count too. A “good first issue” tag is just one clue.</p>
+          </article>
+          <article class="welcome-note">
+            <h3>Make a plan</h3>
+            <p>Every result includes practical pointers to help you go from browsing to contributing.</p>
+          </article>
+          <article class="welcome-note">
+            <h3>Built for first-timers</h3>
+            <p>Explore public GitHub issues by topic, programming language, or a repository you love.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand footer-brand" href="#" aria-label="OpenStart home">
+        <span class="brand-mark" aria-hidden="true">fp</span>
+        <span>openstart<span class="brand-period">.</span></span>
+      </a>
+      <p>Made for the moment before your first pull request.</p>
+      <a href="https://docs.github.com/en/rest/search/search#search-issues-and-pull-requests" target="_blank" rel="noreferrer">
+        About the data <span aria-hidden="true">↗</span>
+      </a>
+    </footer>
+  </body>
+</html>
